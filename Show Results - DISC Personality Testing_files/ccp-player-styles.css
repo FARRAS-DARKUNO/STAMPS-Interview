@@ -1,0 +1,1259 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*
+|--------------------------------------------------------------------------
+| Player Wrapper
+|--------------------------------------------------------------------------
+*/
+div.cool-cast-player-wrapper{
+	padding: 20px;
+	background-color: #F6F7F8;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Player Container
+|--------------------------------------------------------------------------
+*/
+div.cool-cast-player-player-container{
+	font-family: 'Open Sans', sans-serif;
+	width: 100%;
+	height: 100px;
+	background-color: #F1654C;
+}
+div.feed-player-controls{
+	display: none;
+}
+
+div.cool-cast-player-player-container.cool-cast-player-hide-author-image img.cool-cast-player-podcast-image{
+	display: none;
+}
+
+div.cool-cast-player-player-container.cool-cast-player-unsupported-browser{
+	text-align: center;
+    font-weight: bold;
+    padding: 30px;
+    font-size: 14px;
+    color: white;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Player Left Container
+|--------------------------------------------------------------------------
+*/
+div.cool-cast-player-left-container{
+	width: calc( 100% - 100px );
+	float: left;
+	height: 100px;
+}
+
+div.cool-cast-player-player-container.cool-cast-player-hide-author-image div.cool-cast-player-left-container{
+	width: 100%;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Player Left Top
+|--------------------------------------------------------------------------
+*/
+div.cool-cast-player-left-top{
+	width: 100%;
+}
+div.cool-cast-player-left-top-inner{
+	padding: 10px 15px 0px 15px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Player Controls
+|--------------------------------------------------------------------------
+*/
+div.cool-cast-player-controls{
+	float: left;
+}
+div.cool-cast-player-previous-button{
+	position: relative;
+	float: left;
+}
+div.cool-cast-player-previous-button:after{
+	content: "";
+	cursor: pointer;
+	background-image: url('../images/player-images/previous.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 19px;
+	height: 50px;
+	float: left;
+	margin-right: 25px;
+	opacity: .5;
+}
+div.cool-cast-player-previous-button:hover:after{
+	opacity: 1;
+}
+div.cool-cast-player-play-pause-button{
+	position: relative;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+div.cool-cast-player-play-pause-button.amplitude-paused:after{
+	content: "";
+	background-image: url('../images/player-images/play.svg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	opacity: .5;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+div.cool-cast-player-play-pause-button.amplitude-paused:hover:after{
+	opacity: 1;
+}
+div.cool-cast-player-play-pause-button.amplitude-playing:after{
+	content: "";
+	background-image: url('../images/player-images/pause.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+div.cool-cast-player-play-pause-button.amplitude-playing:hover:after{
+	opacity: 1;
+}
+div.cool-cast-player-next-button{
+	position: relative;
+	float: left;
+}
+div.cool-cast-player-next-button:after{
+	content: "";
+	cursor: pointer;
+	background-image: url('../images/player-images/next.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 19px;
+	height: 50px;
+	float: left;
+	margin-left: 25px;
+	opacity: .5;
+}
+div.cool-cast-player-next-button:hover:after{
+	opacity: 1;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Player Meta
+|--------------------------------------------------------------------------
+*/
+div.cool-cast-player-meta{
+	float: left;
+	margin-left: 15px;
+	width: calc( 100% - 195px );
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+div.cool-cast-player-meta.cool-cast-player-download-active{
+	width: calc( 100% - 225px );
+}
+div.cool-cast-player-meta.cool-cast-player-new-window{
+	width: calc( 100% - 225px );
+}
+div.cool-cast-player-meta.cool-cast-player-download-active.cool-cast-player-new-window{
+	width: calc( 100% - 265px );
+}
+div.cool-cast-player-meta.cool-cast-player-episode.cool-cast-player-download-active{
+	width: calc( 100% - 135px );
+}
+div.cool-cast-player-meta.cool-cast-player-episode.cool-cast-player-new-window{
+	width: calc( 100% - 135px );
+}
+div.cool-cast-player-meta.cool-cast-player-episode.cool-cast-player-download-active.cool-cast-player-new-window{
+	width: calc( 100% - 170px );
+}
+span.cool-cast-player-audio-source-name{
+	color: #23282D;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 19px;
+	display: block;
+}
+span.cool-cast-player-audio-item-name{
+	color: #FFFFFF;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 24px;
+	display: block;
+	width: 100%;
+	overflow: hidden;
+}
+span.cool-cast-player-audio-meta{
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 19px;
+	display: block;
+}
+div.cool-cast-player-responsive-date{
+	right: 65px;
+    position: absolute;
+    font-size: 14px;
+    color: white;
+    font-family: "Open Sans";
+    font-weight: 100;
+    display: none;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Player Speed
+|--------------------------------------------------------------------------
+*/
+div.cool-cast-player-speed{
+	float: left;
+	position: relative;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	float: right;
+	margin-top: 20px;
+}
+div.cool-cast-player-speed.amplitude-playback-speed-10:after{
+	content: "";
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	float: right;
+	background-image: url('../images/player-images/speed-10.svg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	opacity: 1;
+}
+div.cool-cast-player-speed.amplitude-playback-speed-15:after{
+	content: "";
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	float: right;
+	background-image: url('../images/player-images/speed-15.svg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	opacity: 1;
+}
+div.cool-cast-player-speed.amplitude-playback-speed-20:after{
+	content: "";
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	float: right;
+	background-image: url('../images/player-images/speed-20.svg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	opacity: 1;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Download Button
+|--------------------------------------------------------------------------
+*/
+img.cool-cast-player-download{
+	position: relative;
+	max-width: none !important;
+    width: 30px !important;
+    height: 30px !important;
+    cursor: pointer;
+    float: right;
+    margin: 0px !important;
+    margin-top: 20px !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    border: 0px !important;
+    background: none !important;
+    padding: 0px !important;
+}
+
+/*
+|--------------------------------------------------------------------------
+| New Window
+|--------------------------------------------------------------------------
+*/
+img.cool-cast-player-new-window-icon{
+	position: relative;
+	max-width: none !important;
+    width: 20px !important;
+    height: 20px !important;
+    cursor: pointer;
+    float: right;
+    margin: 0px !important;
+    margin-top: 25px !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    border: 0px !important;
+    background: none !important;
+    padding: 0px !important;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Embed Code
+|--------------------------------------------------------------------------
+*/
+input[type="text"].cool-cast-player-embed-code{
+	width: 100% !important;
+	float: left;
+	clear: both;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'Open Sans';
+    font-size: 12px;
+}
+input[type="text"].cool-cast-player-embed-code-hidden{
+	display: none;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Player Left Bottom
+|--------------------------------------------------------------------------
+*/
+div.cool-cast-player-left-bottom{
+	width: 100%;
+	clear: both;
+}
+div.cool-cast-player-left-bottom-inner{
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Player Audio Timing
+|--------------------------------------------------------------------------
+*/
+span.cool-cast-player-current-time{
+	font-size: 10px;
+	line-height: 14px;
+	color: #FFFFFF;
+	font-weight: 100;
+	width: 45px;
+	display: block;
+	text-align: left;
+	float: left;
+}
+
+span.cool-cast-player-audio-duration{
+	font-size: 10px;
+	line-height: 14px;
+	color: #FFFFFF;
+	font-weight: 100;
+	width: 45px;
+	display: block;
+	text-align: right;
+	float: left;
+}
+
+@-moz-document url-prefix() {
+	span.cool-cast-player-current-time{
+		margin-top: 5px;
+	}
+
+	span.cool-cast-player-audio-duration{
+		margin-top: 5px;
+	}
+}
+
+/*
+|--------------------------------------------------------------------------
+| Player Range Styles
+|--------------------------------------------------------------------------
+*/
+input[type=range].cool-cast-player-song-slider {
+    /*removes default webkit styles*/
+    -webkit-appearance: none;
+    
+	/*required for proper track sizing in FF*/
+    width: calc( 100% - 110px ) !important;
+	display: block;
+	float: left;
+	border: 1px solid #F1654C;
+	padding: 0px !important;
+}
+input[type=range].cool-cast-player-song-slider:focus{
+	outline: none;
+}
+input[type=range].cool-cast-player-song-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 3px;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range].cool-cast-player-song-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: white;
+    margin-top: -6px;
+}
+input[type=range].cool-cast-player-song-slider:focus {
+    outline: none;
+}
+input[type=range].cool-cast-player-song-slider:focus::-webkit-slider-runnable-track {
+	background: none;
+}
+
+input[type=range].cool-cast-player-song-slider::-moz-range-track {
+    width: 100%;
+    height: 3px;
+    background-color: rgba(255,255,255,.6) !important;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range].cool-cast-player-song-slider::-moz-range-thumb {
+    border: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: white;
+}
+
+/*hide the outline behind the border*/
+input[type=range].cool-cast-player-song-slider::-moz-focusring{
+	outline: 1px solid white;
+	outline-offset: -1px;
+}
+
+input[type=range].cool-cast-player-song-slider::-ms-track {
+  	width: 100%;
+    height: 3px;
+    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range].cool-cast-player-song-slider::-ms-fill-lower {
+	background-color: rgba(255,255,255,.6);
+    border-radius: 10px;
+}
+input[type=range].cool-cast-player-song-slider::-ms-fill-upper {
+	background-color: rgba(255,255,255,.6);
+    border-radius: 10px;
+}
+input[type=range].cool-cast-player-song-slider::-ms-thumb {
+    border: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: white;
+    margin-top: -1px;
+}
+@media all and (-ms-high-contrast:none){
+	input[type="range"].cool-cast-player-song-slider{
+		margin-top: 0px;
+		border: none;
+		background-color: rgba(255,255,255,0) !important;
+	}
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+	input[type="range"].cool-cast-player-song-slider{
+		margin: 0px !important;
+		margin-top: 6px !important;
+		background-color: rgba(255,255,255,.6) !important;
+	}
+}
+
+@supports (-ms-ime-align:auto) {
+	input[type="range"].cool-cast-player-song-slider { 
+		margin-top: -5px !important;		
+		background-color: rgba(255,255,255,0) !important;
+	}
+}
+
+@supports (-ms-accelerator:true) {
+	input[type="range"].cool-cast-player-song-slider { 
+		margin-top: -5px !important;		
+		background-color: rgba(255,255,255,0) !important;
+	}
+	input[type=range].cool-cast-player-song-slider::-ms-thumb {
+	    margin-top: -3px;
+	}
+}
+
+@-moz-document url-prefix() {
+	input[type="range"].cool-cast-player-song-slider{
+		background-color: inherit !important;
+	}
+}
+
+/*
+|--------------------------------------------------------------------------
+| Now Playing Image
+|--------------------------------------------------------------------------
+*/
+img.cool-cast-player-podcast-image{
+	float: left;
+	width: 100px;
+	height: 100px !important;
+	border: 0px !important;
+	margin: 0px !important;
+	max-width: none !important;
+}
+img.cool-cast-player-podcast-image.cool-cast-player-no-author-image{
+	display: none;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Player Audio List Container
+|--------------------------------------------------------------------------
+*/
+div.cool-cast-player-audio-list-container{
+	width: 100%;
+	max-height: 615px;
+	font-family: 'Open Sans', sans-serif;
+	height: 100%;
+	position: relative;
+	background-color: white;
+}
+div.cool-cast-player-audio-list-inner-container{
+	position: relative;
+}
+div.cool-cast-player_audio-list-left-inner-container{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: -15px;
+	overflow-y: scroll;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Player Episode Button Container
+|--------------------------------------------------------------------------
+*/
+div.cool-cast-player-episode-button-container{
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+	position: relative;
+	margin-top: 15px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Player Audio List Left
+|--------------------------------------------------------------------------
+*/
+div.cool-cast-player-audio-list-left{
+	float: left;
+	width: 100%;
+	height: 600px;
+	overflow-y: scroll;	
+}
+div.cool-cast-player-audio-list-left.cool-cast-player-audio-list-right-open{
+	width: 62%;
+}
+div.cool-cast-player_audio-list-left-inner{
+	padding: 20px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Player Audio Feed Meta
+|--------------------------------------------------------------------------
+*/
+span.cool-cast-player-audio-feed-title{
+	display: block;
+	color: #343A3E;
+	font-size: 14px;
+	line-height: 19px;
+	font-weight: 700;
+}
+span.cool-cast-player-audio-feed-source{
+	display: block;
+	color: #9E9E9E;
+	font-size: 12px;
+	line-height: 17px;
+}
+a.cool-cast-player-audio-feed-url{
+	display: block;	
+	color: #4A90E2 !important;
+	font-size: 12px;
+	line-height: 17px;
+	text-decoration: none !important;
+	border: 0px !important;
+	margin-bottom: 5px;
+    border-bottom: 0px !important;
+    box-shadow: none !important;
+}
+a.cool-cast-player-audio-feed-url:visited{
+	text-decoration: none !important;
+}
+a.cool-cast-player-audio-feed-url:hover{
+	text-decoration: none !important;
+}
+p.cool-cast-player-audio-feed-description{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #9E9E9E;
+	font-size: 12px;
+	line-height: 17px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Button Styles
+|--------------------------------------------------------------------------
+*/
+a.cool-cast-player-share-button{
+	color: white !important;
+	display: inline-block;
+	text-transform: uppercase !important;
+	font-size: 12px;
+	line-height: 35px;
+	min-width: 65px;
+	padding: 0px 10px;
+	margin-right: 5px;
+	margin-bottom: 8px;
+	height: 35px;
+	border-radius: 5px;
+	text-align: center;
+	font-weight: 600;
+	cursor: pointer;
+	opacity: .8;
+	border: 0px !important;
+	text-decoration: none !important;
+	box-shadow: none !important;
+}
+a.cool-cast-player-share-button-small{
+	height: 25px;
+    line-height: 25px;
+    min-width: 60px;
+    font-size: 8px;
+}
+a.cool-cast-player-share-button:hover{
+	opacity: 1;
+	color: white !important;
+	text-decoration: none !important;
+}
+a.cool-cast-player-share-button:active{
+	opacity: 1;
+	color: white !important;
+}
+a.cool-cast-player-share-button:visited{
+	opacity: 1;
+	color: white !important;
+}
+a.cool-cast-player-share-button:focus{
+	opacity: 1;
+	color: white !important;
+}
+a.cool-cast-player-facebook-share-button{
+	background-color: #306199;
+}
+a.cool-cast-player-twitter-share-button{
+	background-color: #26C4F1;
+}
+a.cool-cast-player-google-share-button{
+	background-color: #E93F2E;
+}
+a.cool-cast-player-custom-share-button{
+	background-color: #444444;
+}
+a.cool-cast-player-embed-button{
+	background-color: #F89406;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Audio Feed List Styles
+|--------------------------------------------------------------------------
+*/
+div.cool-cast-player-audio-feed-list-container{
+	margin-top: 20px;
+}
+div.cool-cast-player-audio-feed-list-container.cool-cast-player-audio-feed-list-small{
+	display: none;
+}
+div.cool-cast-player-audio-feed-item{
+	color: #23282D;
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 19px;
+	padding: 5px;
+	border-bottom: 1px solid #E3E3E3;
+	cursor: pointer;
+}
+div.cool-cast-player-audio-feed-item:hover{
+	background-color: #FBFBFB;
+}
+div.cool-cast-player-audio-feed-item-date{
+	float: left;
+	width: 40px;
+    height: 40px;
+}
+span.cool-cast-player-audio-feed-item-date-month{
+	display: block;
+	text-align: center;
+}
+span.cool-cast-player-audio-feed-item-date-day{
+	display: block;
+	text-align: center;
+}
+div.cool-cast-player-audio-feed-item-title{
+	color: #23282D;
+	font-size: 14px;
+	line-height: 20px;
+	float: left;
+	width: calc( 100% - 250px);
+	padding-left: 10px;
+}
+div.cool-cast-player-audio-feed-item-title:hover{
+	text-decoration: underline;
+}
+div.cool-cast-player-audio-feed-list-small div.cool-cast-player-audio-feed-item-title:hover{
+	text-decoration: none;
+}
+div.cool-cast-player-audio-feed-item-length{
+	color: #23282D;
+	font-size: 14px;
+	line-height: 40px;
+	float: left;
+	width: 130px;
+	padding-left: 10px;
+	text-align: center;
+}
+div.cool-cast-player-audio-feed-item-play-pause-button{
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+div.cool-cast-player-audio-feed-item-more-info{
+	cursor: pointer;
+	width: 20px;
+	height: 40px;
+	float: left;
+	background-image: url('../images/player-images/more-icon.svg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+}
+div.cool-cast-player-audio-feed-item-play-pause-button.amplitude-paused{
+	background-image: url('../images/player-images/play-grey.svg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+div.cool-cast-player-audio-feed-item-play-pause-button.amplitude-paused:hover{
+	background-image: url('data:image/svg+xml;utif8,<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><title>Play Button</title><desc>Created with Sketch.</desc><defs></defs><g id="01.00.00-PodcastFeed" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"><g id="HD_01.00.00-RaviPodcastPlugin_PodcastFeed" sketch:type="MSArtboardGroup" transform="translate(-1116.000000, -796.000000)"><g id="Podcast-Player" sketch:type="MSLayerGroup" transform="translate(232.000000, 433.000000)"><g id="Rows" transform="translate(20.000000, 304.000000)" sketch:type="MSShapeGroup"><g id="Row-Copy" transform="translate(0.000000, 50.000000)"><g id="Play-Button" transform="translate(865.000000, 10.000000)"><circle id="Oval-3" stroke="#F1654C" cx="15" cy="15" r="15"></circle><path d="M20.1845,14.4665 C20.357,14.618 20.499,14.7665 20.499,15.004 C20.499,15.241 20.398,15.385 20.1845,15.541 L12.6305,21.4515 C12.505,21.5375 12.0075,21.5745 12.001,21.0215 L12.001,8.986 C12.0015,8.4745 12.456,8.434 12.6305,8.5565 L20.1845,14.4665 Z" id="path-1" fill="#F1654C"></path></g></g></g></g></g></g></svg>');
+}
+div.cool-cast-player-audio-feed-item-play-pause-button.amplitude-playing{
+	background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg width="32px" height="31px" viewBox="0 0 32 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><title>Pause Button Copy</title><desc>Created with Sketch.</desc><defs></defs><g id="01.00.00-PodcastFeed" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"><g id="HD_01.00.01-RaviPodcastPlugin_PodcastFeed-ActiveRow" sketch:type="MSArtboardGroup" transform="translate(-843.000000, -758.000000)"><g id="Podcast-Player" sketch:type="MSLayerGroup" transform="translate(232.000000, 433.000000)"><g id="Rows" transform="translate(20.000000, 316.000000)" sketch:type="MSShapeGroup"><g id="Row"><g id="Pause-Button-Copy" transform="translate(592.000000, 9.500000)"><circle id="Oval-3" stroke="#F1654C" cx="15" cy="15" r="15"></circle><g id="Imported-Layers-+-Imported-Layers-Copy" transform="translate(10.200000, 8.400000)" fill="#F1654C"><path d="M2.94528,0 L0.99072,0 C0.44352,0 0,0.453428571 0,1.02021429 L0,11.9626286 C0,12.5284286 0.44352,12.9858 0.99072,12.9858 L2.94528,12.9858 C3.49248,12.9858 3.93312,12.5284286 3.93312,11.9626286 L3.93312,1.02021429 C3.93312,0.456385714 3.49248,0 2.94528,0" id="Imported-Layers"></path><path d="M8.94528,0 L6.99072,0 C6.44352,0 6,0.453428571 6,1.02021429 L6,11.9626286 C6,12.5284286 6.44352,12.9858 6.99072,12.9858 L8.94528,12.9858 C9.49248,12.9858 9.93312,12.5284286 9.93312,11.9626286 L9.93312,1.02021429 C9.93312,0.456385714 9.49248,0 8.94528,0" id="Imported-Layers-Copy"></path></g></g></g></g></g></g></g></svg>');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+div.cool-cast-player-audio-feed-list-small div.cool-cast-player-audio-feed-item.amplitude-playing div.cool-cast-player-audio-feed-item-play-pause-button{
+	background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg width="32px" height="31px" viewBox="0 0 32 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><title>Pause Button Copy</title><desc>Created with Sketch.</desc><defs></defs><g id="01.00.00-PodcastFeed" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"><g id="HD_01.00.01-RaviPodcastPlugin_PodcastFeed-ActiveRow" sketch:type="MSArtboardGroup" transform="translate(-843.000000, -758.000000)"><g id="Podcast-Player" sketch:type="MSLayerGroup" transform="translate(232.000000, 433.000000)"><g id="Rows" transform="translate(20.000000, 316.000000)" sketch:type="MSShapeGroup"><g id="Row"><g id="Pause-Button-Copy" transform="translate(592.000000, 9.500000)"><circle id="Oval-3" stroke="#F1654C" cx="15" cy="15" r="15"></circle><g id="Imported-Layers-+-Imported-Layers-Copy" transform="translate(10.200000, 8.400000)" fill="#F1654C"><path d="M2.94528,0 L0.99072,0 C0.44352,0 0,0.453428571 0,1.02021429 L0,11.9626286 C0,12.5284286 0.44352,12.9858 0.99072,12.9858 L2.94528,12.9858 C3.49248,12.9858 3.93312,12.5284286 3.93312,11.9626286 L3.93312,1.02021429 C3.93312,0.456385714 3.49248,0 2.94528,0" id="Imported-Layers"></path><path d="M8.94528,0 L6.99072,0 C6.44352,0 6,0.453428571 6,1.02021429 L6,11.9626286 C6,12.5284286 6.44352,12.9858 6.99072,12.9858 L8.94528,12.9858 C9.49248,12.9858 9.93312,12.5284286 9.93312,11.9626286 L9.93312,1.02021429 C9.93312,0.456385714 9.49248,0 8.94528,0" id="Imported-Layers-Copy"></path></g></g></g></g></g></g></g></svg>');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+div.cool-cast-player-audio-feed-list-small div.cool-cast-player-audio-feed-item.amplitude-paused div.cool-cast-player-audio-feed-item-play-pause-button{
+	background-image: url('../images/player-images/play-grey.svg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+div.cool-cast-player-audio-feed-list-small div.cool-cast-player-audio-feed-item.amplitude-paused div.cool-cast-player-audio-feed-item-play-pause-button:hover{
+	background-image: url('data:image/svg+xml;utif8,<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><title>Play Button</title><desc>Created with Sketch.</desc><defs></defs><g id="01.00.00-PodcastFeed" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"><g id="HD_01.00.00-RaviPodcastPlugin_PodcastFeed" sketch:type="MSArtboardGroup" transform="translate(-1116.000000, -796.000000)"><g id="Podcast-Player" sketch:type="MSLayerGroup" transform="translate(232.000000, 433.000000)"><g id="Rows" transform="translate(20.000000, 304.000000)" sketch:type="MSShapeGroup"><g id="Row-Copy" transform="translate(0.000000, 50.000000)"><g id="Play-Button" transform="translate(865.000000, 10.000000)"><circle id="Oval-3" stroke="#F1654C" cx="15" cy="15" r="15"></circle><path d="M20.1845,14.4665 C20.357,14.618 20.499,14.7665 20.499,15.004 C20.499,15.241 20.398,15.385 20.1845,15.541 L12.6305,21.4515 C12.505,21.5375 12.0075,21.5745 12.001,21.0215 L12.001,8.986 C12.0015,8.4745 12.456,8.434 12.6305,8.5565 L20.1845,14.4665 Z" id="path-1" fill="#F1654C"></path></g></g></g></g></g></g></svg>');
+}
+@supports (-ms-accelerator:true) {
+	div.cool-cast-player-audio-feed-item-play-pause-button.amplitude-playing{
+		background-image: url('../images/player-images/pause-grey.svg') !important;
+	}
+	div.cool-cast-player-audio-feed-list-small div.cool-cast-player-audio-feed-item.amplitude-playing div.cool-cast-player-audio-feed-item-play-pause-button{
+		background-image: url('../images/player-images/pause-grey.svg') !important;
+	}
+	div.cool-cast-player-audio-feed-item-play-pause-button.amplitude-paused:hover{
+		background-image: url('../images/player-images/play-grey.svg') !important;
+	}
+	div.cool-cast-player-audio-feed-list-small div.cool-cast-player-audio-feed-item.amplitude-paused div.cool-cast-player-audio-feed-item-play-pause-button:hover{
+		background-image: url('../images/player-images/play-grey.svg') !important;
+	}
+}
+@media all and (-ms-high-contrast:none){
+	div.cool-cast-player-audio-feed-item-play-pause-button.amplitude-playing{
+		background-image: url('../images/player-images/pause-grey.svg') !important;
+	}
+	div.cool-cast-player-audio-feed-list-small div.cool-cast-player-audio-feed-item.amplitude-playing div.cool-cast-player-audio-feed-item-play-pause-button{
+		background-image: url('../images/player-images/pause-grey.svg') !important;
+	}
+	div.cool-cast-player-audio-feed-item-play-pause-button.amplitude-paused:hover{
+		background-image: url('../images/player-images/play-grey.svg') !important;
+	}
+	div.cool-cast-player-audio-feed-list-small div.cool-cast-player-audio-feed-item.amplitude-paused div.cool-cast-player-audio-feed-item-play-pause-button:hover{
+		background-image: url('../images/player-images/play-grey.svg') !important;
+	}
+}
+@supports (-ms-ime-align:auto) {
+	div.cool-cast-player-audio-feed-item-play-pause-button.amplitude-playing{
+		background-image: url('../images/player-images/pause-grey.svg') !important;
+	}
+	div.cool-cast-player-audio-feed-list-small div.cool-cast-player-audio-feed-item.amplitude-playing div.cool-cast-player-audio-feed-item-play-pause-button{
+		background-image: url('../images/player-images/pause-grey.svg') !important;
+	}
+	div.cool-cast-player-audio-feed-item-play-pause-button.amplitude-paused:hover{
+		background-image: url('../images/player-images/play-grey.svg') !important;
+	}
+	div.cool-cast-player-audio-feed-list-small div.cool-cast-player-audio-feed-item div.cool-cast-player-audio-feed-item-play-pause-button.amplitude-paused:hover{
+		background-image: url('../images/player-images/play-grey.svg') !important;
+	}
+}
+/*
+|--------------------------------------------------------------------------
+| Player Audio List Right
+|--------------------------------------------------------------------------
+*/
+div.cool-cast-player-audio-list-right{
+	float: left;
+	position: absolute;
+    right: 0px;
+    width: 40%;
+    background-color: white;
+    border-left: 1px solid #ccc;
+	display: none;
+	height: 600px;
+	overflow-y: scroll;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Player Selected Item Header
+|--------------------------------------------------------------------------
+*/
+div.cool-cast-player-selected-item-header{
+    margin: 20px 0px 20px 10px;
+    font-size: 14px;
+    color: #343A3E;
+    font-weight: 600;
+    border-bottom: 1px solid #E3E3E3;
+    line-height: 19px;
+    padding-bottom: 20px;
+    position: relative;
+    padding-right: 25px;
+}
+a.cool-cast-player-selected-item-header-close{
+    position: absolute;
+    font-weight: 700;
+    color: #666666 !important;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 5px;
+    display: block;
+    right: 0px;
+    top: -5px;
+    border: 0px !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+}
+a.cool-cast-player-selected-item-header-close:hover{
+	color: #000000 !important;
+}
+/*
+|--------------------------------------------------------------------------
+| Player Selected Item Description
+|--------------------------------------------------------------------------
+*/
+div.cool-cast-player-selected-item-description{
+	color: #9B9B9B;
+	font-size: 14px;
+	line-height: 22px;
+	padding: 0px 20px 20px 10px;
+	font-weight: 100;
+}
+div.cool-cast-player-selected-item-description a{
+	color: #4A90E2;
+	text-decoration: none;
+	border: 0px !important;
+}
+div.cool-cast-player-selected-item-description p{
+	margin-bottom: 10px;
+	color: #000000 !important;
+	font-size: 14px !important;
+	line-height: 22px !important;
+	font-weight: 100 !important;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Unsupported Browser Screen
+|--------------------------------------------------------------------------
+*/
+
+/*
+|--------------------------------------------------------------------------
+| Large Devices, Wide Screens
+|--------------------------------------------------------------------------
+*/
+@media only screen and (max-width : 1200px) {
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Medium Devices, Desktops
+|--------------------------------------------------------------------------
+*/
+@media only screen and (max-width : 992px) {
+	div.cool-cast-player-audio-list-left.cool-cast-player-audio-list-right-open{
+	    width: 70%;
+	}
+	div.cool-cast-player-audio-list-right{
+		width: 30%;
+	}
+	div.cool-cast-player-audio-feed-list-container.cool-cast-player-audio-feed-list-large{
+		display: none;
+	}
+	div.cool-cast-player-audio-feed-list-container.cool-cast-player-audio-feed-list-small{
+		display: block;
+	}
+}
+
+/*
+|--------------------------------------------------------------------------
+| Javascript Scope Medium Devices, Desktops
+|--------------------------------------------------------------------------
+*/
+div.cool-cast-player-javascript-medium-devices-desktop div.cool-cast-player-audio-list-left.cool-cast-player-audio-list-right-open{
+	width: 70%;
+}
+div.cool-cast-player-javascript-medium-devices-desktop div.cool-cast-player-audio-list-right{
+	width: 30%;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Small Devices, Tablets
+|--------------------------------------------------------------------------
+*/
+@media only screen and (max-width : 768px) {
+	div.cool-cast-player-previous-button{
+		display: none;
+	}
+	div.cool-cast-player-next-button{
+		display: none;
+	}
+	div.cool-cast-player-audio-feed-item-date{
+		display: none;
+	}
+	div.cool-cast-player-audio-feed-item-length{
+		width: 70px;
+	}
+	div.cool-cast-player-audio-feed-item-title{
+		width: calc( 100% - 165px );
+		line-height: 20px;
+	}
+	div.cool-cast-player-audio-feed-list-container.cool-cast-player-audio-feed-list-small{
+		display: block;
+	}
+	div.cool-cast-player-audio-feed-item-more-info{
+		display: none;
+	}
+	div.cool-cast-player-meta.cool-cast-player-download-active.cool-cast-player-new-window{
+		width: calc( 100% - 105px );
+	}
+	img.cool-cast-player-new-window-icon{
+		display: none;
+	}
+	img.cool-cast-player-download{
+		width: calc( 100% - 105px );
+	}
+}
+
+/*
+|--------------------------------------------------------------------------
+| Javascript Scope Small Devices, Tablets
+|--------------------------------------------------------------------------
+*/
+div.cool-cast-player-javascript-small-devices-tablets div.cool-cast-player-audio-feed-item-date{
+	display: none;
+}
+div.cool-cast-player-javascript-small-devices-tablets div.cool-cast-player-audio-feed-item-length{
+	width: 90px;
+}
+div.cool-cast-player-javascript-small-devices-tablets div.cool-cast-player-audio-feed-item-title{
+	width: calc( 100% - 175px );
+	line-height: 20px;
+}
+div.cool-cast-player-javascript-small-devices-tablets div.cool-cast-player-audio-feed-list-container.cool-cast-player-audio-feed-list-large{
+	display: none;
+}
+div.cool-cast-player-javascript-small-devices-tablets div.cool-cast-player-audio-feed-list-container.cool-cast-player-audio-feed-list-small{
+	display: block;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Between Extra Small and Small
+|--------------------------------------------------------------------------
+*/
+@media only screen and (max-width : 580px) {
+	div.cool-cast-player-meta{
+		width: calc( 100% - 105px );
+	}
+	div.cool-cast-player-previous-button{
+		display: none;
+	}
+	div.cool-cast-player-next-button{
+		display: none;
+	}
+	div.cool-cast-player-meta.cool-cast-player-download-active{
+		width: calc( 100% - 105px );
+	}
+	div.cool-cast-player-meta.cool-cast-player-new-window{
+		width: calc( 100% - 105px );
+	}
+	div.cool-cast-player-meta.cool-cast-player-download-active.cool-cast-player-new-window{
+		width: calc( 100% - 105px );
+	}
+	div.cool-cast-player-meta.cool-cast-player-episode.cool-cast-player-download-active{
+		width: calc( 100% - 100px );
+	}
+	div.cool-cast-player-meta.cool-cast-player-episode.cool-cast-player-new-window{
+		width: calc( 100% - 100px );
+	}
+	div.cool-cast-player-meta.cool-cast-player-episode.cool-cast-player-download-active.cool-cast-player-new-window{
+		width: calc( 100% - 100px );
+	}
+	span.cool-cast-player-audio-meta{
+		display: none;
+	}
+	img.cool-cast-player-download{
+		display: none;
+	}
+	img.cool-cast-player-new-window-icon{
+		display: none;
+	}
+	img.cool-cast-player-podcast-image{
+		display: none;
+	}
+	div.cool-cast-player-left-container{
+		width: 100%;
+	}
+	div.cool-cast-player-javascript-between-extra-small-and-small div.cool-cast-player-audio-feed-list-container.cool-cast-player-audio-feed-list-large{
+		display: none;
+	}
+	div.cool-cast-player-audio-feed-item-title{
+		width: calc( 100% - 130px );
+	}
+	div.cool-cast-player-responsive-date{
+		display: block;
+	}
+	div.cool-cast-player-meta.cool-cast-player-download-active.cool-cast-player-new-window{
+		margin-top: 15px;
+	}
+}
+
+/*
+|--------------------------------------------------------------------------
+| Javascript Scope Between Extra Small and Small
+|--------------------------------------------------------------------------
+*/
+div.cool-cast-player-javascript-between-extra-small-and-small div.cool-cast-player-meta{
+	width: calc( 100% - 105px );
+}
+
+div.cool-cast-player-javascript-between-extra-small-and-small div.cool-cast-player-previous-button{
+	display: none;
+}
+
+div.cool-cast-player-javascript-between-extra-small-and-small div.cool-cast-player-next-button{
+	display: none;
+}
+
+div.cool-cast-player-javascript-between-extra-small-and-small div.cool-cast-player-meta.cool-cast-player-download-active{
+	width: calc( 100% - 105px );
+}
+
+div.cool-cast-player-javascript-between-extra-small-and-small div.cool-cast-player-meta.cool-cast-player-new-window{
+	width: calc( 100% - 105px );
+}
+
+div.cool-cast-player-javascript-between-extra-small-and-small div.cool-cast-player-meta.cool-cast-player-download-active.cool-cast-player-new-window{
+	width: calc( 100% - 105px );
+}
+
+div.cool-cast-player-javascript-between-extra-small-and-small div.cool-cast-player-meta.cool-cast-player-episode.cool-cast-player-download-active{
+	width: calc( 100% - 100px );
+}
+
+div.cool-cast-player-javascript-between-extra-small-and-small div.cool-cast-player-meta.cool-cast-player-episode.cool-cast-player-new-window{
+	width: calc( 100% - 100px );
+}
+
+div.cool-cast-player-javascript-between-extra-small-and-small div.cool-cast-player-meta.cool-cast-player-episode.cool-cast-player-download-active.cool-cast-player-new-window{
+	width: calc( 100% - 100px );
+}
+
+div.cool-cast-player-javascript-between-extra-small-and-small img.cool-cast-player-download{
+	display: none;
+}
+
+div.cool-cast-player-javascript-between-extra-small-and-small img.cool-cast-player-new-window-icon{
+	display: none;
+}
+div.cool-cast-player-javascript-between-extra-small-and-small div.cool-cast-player-audio-feed-list-container.cool-cast-player-audio-feed-list-large{
+	display: none;
+}
+div.cool-cast-player-javascript-between-extra-small-and-small div.cool-cast-player-audio-feed-item-title{
+	width: calc( 100% - 130px );
+}
+div.cool-cast-player-javascript-between-extra-small-and-small div.cool-cast-player-audio-feed-item-more-info{
+	display: none;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Extra Small Devices, Phones
+|--------------------------------------------------------------------------
+*/
+@media only screen and (max-width : 480px) {
+	div.cool-cast-player-meta.cool-cast-player-download-active.cool-cast-player-new-window{
+		margin-top: 15px;
+	}
+	div.cool-cast-player-responsive-date{
+		display: block;
+	}
+	span.cool-cast-player-audio-meta{
+		display: none;
+	}
+	div.cool-cast-player-meta{
+		width: calc( 100% - 105px );
+	}
+	div.cool-cast-player-speed{
+	    height: 60px;
+	    margin-top: 25px;
+	    margin-bottom: -25px;
+	}
+	div.cool-cast-player-left-container{
+		width: 100%;
+	}
+	img.cool-cast-player-podcast-image{
+		display: none;
+	}
+	a.cool-cast-player-share-button{
+		margin-top: 10px;
+	}
+	div.cool-cast-player-play-pause-button.amplitude-playing:after{
+		opacity: 1;
+	}
+	div.cool-cast-player-play-pause-button.amplitude-paused:after{
+		opacity: 1;
+	}
+}
+
+/*
+|--------------------------------------------------------------------------
+| Javascript Scope Extra Small Devices, Phones
+|--------------------------------------------------------------------------
+*/
+div.cool-cast-player-javascript-extra-small div.cool-cast-player-meta.cool-cast-player-download-active.cool-cast-player-new-window{
+	margin-top: 15px;
+}
+
+div.cool-cast-player-javascript-extra-small div.cool-cast-player-responsive-date{
+	display: block;
+}
+
+div.cool-cast-player-javascript-extra-small span.cool-cast-player-audio-meta{
+	display: none;
+}
+
+div.cool-cast-player-javascript-extra-small div.cool-cast-player-meta{
+	width: calc( 100% - 105px );
+}
+
+div.cool-cast-player-javascript-extra-small div.cool-cast-player-speed{
+    height: 60px;
+    margin-top: 25px;
+    margin-bottom: -25px;
+}
+
+div.cool-cast-player-javascript-extra-small div.cool-cast-player-left-container{
+	width: 100%;
+}
+
+div.cool-cast-player-javascript-extra-small img.cool-cast-player-podcast-image{
+	display: none;
+}
+
+div.cool-cast-player-javascript-extra-small a.cool-cast-player-share-button{
+	margin-top: 10px;
+}
+
+div.cool-cast-player-javascript-extra-small div.cool-cast-player-play-pause-button.amplitude-playing:after{
+	opacity: 1;
+}
+
+div.cool-cast-player-javascript-extra-small div.cool-cast-player-play-pause-button.amplitude-paused:after{
+	opacity: 1;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Custom, iPhone Retina
+|--------------------------------------------------------------------------
+*/
+@media only screen and (max-width : 320px) {
+    
+}
+
+/*
+|--------------------------------------------------------------------------
+| Preloaders For Images
+|--------------------------------------------------------------------------
+*/
+@media screen {
+	div#preloader {
+		position: absolute;
+		left: -9999px;
+		top:  -9999px;
+		}
+	div#preloader img {
+		display: block;
+		}
+	}
+@media print {
+	div#preloader, 
+	div#preloader img {
+		visibility: hidden;
+		display: none;
+		}
+	}
